@@ -1,0 +1,25 @@
+galaxy_info:
+  author: Sébastien Elet
+  description: Setup telegraf
+  company: SimpliField
+  license: BSD
+  min_ansible_version: 2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+    - utopic
+    - vivid
+    - wily
+    - xenial
+    - yakkety
+  galaxy_tags:
+  - telegraf
+
+dependencies:
+- role: SimpliField.packages
+  packages:
+  - python-httplib2
+  - python-apt
+  - curl
+  packages_update_cache: "{{ telegraf_packages_update_cache }}"
